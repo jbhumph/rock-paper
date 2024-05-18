@@ -10,4 +10,23 @@ function getComputerChoice() {
 
 }
 
-console.log(getComputerChoice())
+function getHumanChoice() {
+    proper = false;
+    while (proper == false) {
+        let choice = prompt("Rock, Paper, or Scissors? ")
+        if (choice.toUpperCase() == "ROCK") {
+            proper = true;
+            return "Rock"
+        } else if (choice.toUpperCase() == "PAPER") {
+            proper = true;
+            return "Paper"
+        } else if (choice.toUpperCase() == "SCISSORS") {
+            proper = true;
+            return "Scissors"
+        } else {
+            proper = false;
+        }
+    }
+}
+
+console.log(getHumanChoice())
