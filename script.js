@@ -62,7 +62,18 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    
+    console.log("Get ready - This game will have 5 rounds.")
+    for (let i = 0; i < 5; i++) {
+        playRound()
+    }
+    if (humanScore > computerScore) {
+        console.log("You won the game!")
+    } else if (humanScore < computerScore) {
+        console.log("You lost the game :(")
+    } else {
+        console.log("It's a tie game!")
+    }
+    console.log(`Player: ${humanScore}   Computer: ${computerScore}`)
 }
 
 let humanScore = 0;
@@ -70,4 +81,4 @@ let computerScore = 0;
 // const humanSelection = getHumanChoice();
 // const computerSelection = getComputerChoice();
 
-playRound()
+playGame()
