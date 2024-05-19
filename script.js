@@ -1,11 +1,11 @@
 function getComputerChoice() {
     number = Math.floor(Math.random() * 3)
     if (number == 0) {
-        return "rock";
+        return "Rock";
     } else if (number == 1) {
-        return "paper";
+        return "Paper";
     } else {
-        return "scissors";
+        return "Scissors";
     }
 
 }
@@ -29,4 +29,45 @@ function getHumanChoice() {
     }
 }
 
-console.log(getHumanChoice())
+function playRound(humanChoice, computerChoice) {
+    humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    if (humanChoice == computerChoice) {
+        console.log("Tie!")
+    } else if (computerChoice == "Rock") {
+        if (humanChoice == "Paper") {
+            humanScore++;
+            console.log("You Win! Paper beats rock.")
+        } else if (humanChoice == "Scissors") {
+            computerScore++;
+            console.log("You lose! Rock beats scissors.")
+        }
+    } else if (computerChoice == "Paper") {
+        if (humanChoice == "Scissors") {
+            humanScore++;
+            console.log("You Win! Scissors beats paper.")
+        } else if (humanChoice == "Rock") {
+            computerScore++;
+            console.log("You lose! Paper beats rock.")
+        }
+    } else if (computerChoice == "Scissors") {
+        if (humanChoice == "Rock") {
+            humanScore++;
+            console.log("You Win! Rock beats scissors.")
+        } else if (humanChoice == "Paper") {
+            computerScore++;
+            console.log("You lose! Scissors beats paper.")
+        }
+    }
+}
+
+function playGame() {
+    
+}
+
+let humanScore = 0;
+let computerScore = 0;
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
+
+playRound()
