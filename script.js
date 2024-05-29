@@ -13,62 +13,64 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    proper = false;
-    while (proper == false) {
-        let choice = prompt("Rock, Paper, or Scissors? ")
-        if (choice.toUpperCase() == "ROCK") {
-            proper = true;
-            return "Rock"
-        } else if (choice.toUpperCase() == "PAPER") {
-            proper = true;
-            return "Paper"
-        } else if (choice.toUpperCase() == "SCISSORS") {
-            proper = true;
-            return "Scissors"
-        } else {
-            proper = false;
-        }
-    }
+    choice = null;
+    
+
 }
 
 function playRound(humanChoice, computerChoice) {
-    humanChoice = getHumanChoice();
+    humanChoice = choice;
     computerChoice = getComputerChoice();
     if (humanChoice == computerChoice) {
-        console.log("Tie!")
+        responseLine = "Tie!";
     } else if (computerChoice == "Rock") {
         if (humanChoice == "Paper") {
             humanScore++;
-            console.log("You Win! Paper beats rock.")
+            responseLine = "You Win! Paper beats rock.";
         } else if (humanChoice == "Scissors") {
             computerScore++;
-            console.log("You lose! Rock beats scissors.")
+            responseLine = "You lose! Rock beats scissors."
         }
     } else if (computerChoice == "Paper") {
         if (humanChoice == "Scissors") {
             humanScore++;
-            console.log("You Win! Scissors beats paper.")
+            responseLine = "You Win! Scissors beats paper."
         } else if (humanChoice == "Rock") {
             computerScore++;
-            console.log("You lose! Paper beats rock.")
+            responseLine = "You lose! Paper beats rock.";
         }
     } else if (computerChoice == "Scissors") {
         if (humanChoice == "Rock") {
             humanScore++;
-            console.log("You Win! Rock beats scissors.")
+            responseLine = "You Win! Rock beats scissors.";
         } else if (humanChoice == "Paper") {
             computerScore++;
-            console.log("You lose! Scissors beats paper.")
+            responseLine = "You lose! Scissors beats paper.";
         }
     }
 }
 
 function playGame() {
-    console.log("Get ready - This game will have 5 rounds.")
-    /*for (let i = 0; i < 5; i++) {
-        playRound()
-    }*/
-    playRound()
+    count = 0;
+    while (count < 2) {
+        rock.addEventListener("click", () => {
+            choice = "Rock";
+            playRound();
+            count++;
+        })
+
+        paper.addEventListener("click", () => {
+            choice = "Paper";
+            playRound();
+            count++;
+        })
+
+        scissors.addEventListener("click", () => {
+            choice = "Scissors";
+            playRound();
+            count++;
+        })
+    }
     if (humanScore > computerScore) {
         console.log("You won the game!")
     } else if (humanScore < computerScore) {
@@ -83,6 +85,9 @@ function playGame() {
 // Declare game variables
 let humanScore = 0;
 let computerScore = 0;
+let choice = null;
+let count = 0;
+let responseLine = "";
 
 
 // DOM elements
@@ -93,8 +98,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const scissors = document.querySelector("#scissors");
 
     const play = document.querySelector("#play");
+    const response = document.querySelector(".response");
+    const scoreboard = document.querySelector(".scoreboard");
+
+    scoreboard.textContent = `Player: ${humanScore}   Computer: ${computerScore}`;
 
     play.addEventListener("click", () => {
-        playGame();
+        console.log("Hello")
     });
+
+    rock.addEventListener("click", () => {
+        choice = "Rock";
+        playRound();
+        count++;
+        response.textContent = responseLine;
+        scoreboard.textContent = `Player: ${humanScore}   Computer: ${computerScore}`;
+    })
+
+    paper.addEventListener("click", () => {
+        choice = "Paper";
+        playRound();
+        count++;
+        response.textContent = responseLine;
+        scoreboard.textContent = `Player: ${humanScore}   Computer: ${computerScore}`;
+    })
+
+    scissors.addEventListener("click", () => {
+        choice = "Scissors";
+        playRound();
+        count++;
+        response.textContent = responseLine;
+        scoreboard.textContent = `Player: ${humanScore}   Computer: ${computerScore}`;
+    })
+
+    
 })
