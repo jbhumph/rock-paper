@@ -1,3 +1,5 @@
+
+
 function getComputerChoice() {
     number = Math.floor(Math.random() * 3)
     if (number == 0) {
@@ -63,9 +65,10 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {
     console.log("Get ready - This game will have 5 rounds.")
-    for (let i = 0; i < 5; i++) {
+    /*for (let i = 0; i < 5; i++) {
         playRound()
-    }
+    }*/
+    playRound()
     if (humanScore > computerScore) {
         console.log("You won the game!")
     } else if (humanScore < computerScore) {
@@ -76,9 +79,22 @@ function playGame() {
     console.log(`Player: ${humanScore}   Computer: ${computerScore}`)
 }
 
+
+// Declare game variables
 let humanScore = 0;
 let computerScore = 0;
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
 
-playGame()
+
+// DOM elements
+document.addEventListener("DOMContentLoaded", () => {
+    // Declare document items as variables
+    const rock = document.querySelector("#rock");
+    const paper = document.querySelector("#paper");
+    const scissors = document.querySelector("#scissors");
+
+    const play = document.querySelector("#play");
+
+    play.addEventListener("click", () => {
+        playGame();
+    });
+})
