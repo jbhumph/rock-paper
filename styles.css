@@ -10,7 +10,7 @@ body {
 
 
 .header {
-    background-color: #1f2937;
+    background-color: #13678A;
     display: flex;
     flex-basis: auto;
     padding: 8px;
@@ -20,7 +20,7 @@ body {
 .guide {
     display: flex;
     color: #f9faf8;
-    font-size: 24px;
+    font-size: 18px;
     flex-basis: 900px;
     padding: 1px;
     justify-content: center;
@@ -31,11 +31,16 @@ body {
 .hero {
     display: flex;
     flex-wrap: wrap;
-    background-color: #e5e7eb;
+    background-color: #012030;
     padding: 16px;
     flex: auto;
     justify-content: center;
-    color: black;
+    color: #f9faf8;
+}
+
+h1 {
+    color: #9AEBA3;
+    font-size: 36px;
 }
 
 .heroes {
@@ -51,11 +56,18 @@ h1 {
 
 .subtitle {
     text-align: center;
+    color: #45C4B0;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .intro {
     text-align: center;
     display: flex;
+    padding-top: 8px;
+    padding-bottom: 16px;
 }
 
 
@@ -63,12 +75,20 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 8px;
+    padding-bottom: 32px;
 }
 
 .newPara {
     display: flex;
     text-align: center;
     flex-basis: 400px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #9AEBA3;
+    color: #012030;
 }
 
 #play {
@@ -77,11 +97,22 @@ h1 {
     padding: 15px 32px;
 }
 
+#play:hover {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 32px;
+    color: #9AEBA3;
+    border-color: #9AEBA3;
+}
+
+
 
 .buttons {
     display: flex;
     justify-content: space-around;
     flex: auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 .innerButtons {
@@ -108,11 +139,11 @@ h1 {
 }
 
 #rock:hover {
-    border-color: pink;
+    border-color: #9AEBA3;
     border-width: 6px;
     border-style: solid;
     border-radius: 8px;
-    color: pink;
+    color: #9AEBA3;
 }
 
 #paper {
@@ -123,11 +154,11 @@ h1 {
 }
 
 #paper:hover {
-    border-color: pink;
+    border-color: #9AEBA3;
     border-width: 6px;
     border-style: solid;
     border-radius: 8px;
-    color: pink;
+    color: #9AEBA3;
 }
 
 #scissors {
@@ -138,11 +169,11 @@ h1 {
 }
 
 #scissors:hover {
-    border-color: pink;
+    border-color: #9AEBA3;
     border-width: 6px;
     border-style: solid;
     border-radius: 8px;
-    color: pink;
+    color: #9AEBA3;
 }
 
 
@@ -153,7 +184,8 @@ h1 {
     align-content: center;
     flex: auto;
     flex-basis: 400px;
-    background-color: #e5e7eb;
+    background-color: #45C4B0;
+    padding-top: 16px;
 }
 
 .outBanner {
@@ -164,13 +196,16 @@ h1 {
 .banner {
     flex-basis: 900px;
     text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
     padding-top: 24px;
     padding-bottom: 24px;
-    border-color: #1f2937;
+    border-color: #13678A;
     border-width: 6px;
     border-style: solid;
     border-radius: 8px;
-    background-color: #f9faf8;
+    background-color: #012030;
+    color: #f9faf8;
 }
 
 .mainArea {
@@ -199,28 +234,28 @@ h1 {
 }
 
 .response {
-    border-color: #1f2937;
+    border-color: #9AEBA3;
     border-width: 6px;
     border-style: solid;
     border-radius: 8px;
-    background-color: #f9faf8;
+    background-color: #DAFDBA;
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
 .scoreboard {
-    border-color: #1f2937;
+    border-color: #9AEBA3;
     border-width: 6px;
     border-style: solid;
     border-radius: 8px;
-    background-color: #f9faf8;
+    background-color: #DAFDBA;
     padding-top: 24px;
     padding-bottom: 24px;
 }
 
 
 .footer {
-    background-color: #1f2937;
+    background-color: #13678A;
     display: flex;
     flex-basis: auto;
     padding: 8px;
@@ -230,7 +265,7 @@ h1 {
 .footContent {
     display: flex;
     color: #f9faf8;
-    font-size: 16px;
+    font-size: 12px;
     flex-basis: 1;
     padding: 1px;
     justify-content: center;
