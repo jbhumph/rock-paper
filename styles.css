@@ -91,19 +91,131 @@ h1 {
     justify-content: space-around;
 }
 
+.title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#rock {
+    border-color: #1f2937;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#rock:hover {
+    border-color: pink;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+    color: pink;
+}
+
+#paper {
+    border-color: #1f2937;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#paper:hover {
+    border-color: pink;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+    color: pink;
+}
+
+#scissors {
+    border-color: #1f2937;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+#scissors:hover {
+    border-color: pink;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+    color: pink;
+}
+
+
 .results {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-content: center;
     flex: auto;
+    flex-basis: 400px;
+    background-color: #e5e7eb;
 }
 
-.area {
+.outBanner {
     display: flex;
+    justify-content: center;
 }
 
 .banner {
+    flex-basis: 900px;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-color: #1f2937;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: #f9faf8;
+}
+
+.mainArea {
     display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+#pic {
+    flex-basis: 350px;
+    border-color: #1f2937;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+.area {
+    flex-basis: 450px;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.response {
+    border-color: #1f2937;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: #f9faf8;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.scoreboard {
+    border-color: #1f2937;
+    border-width: 6px;
+    border-style: solid;
+    border-radius: 8px;
+    background-color: #f9faf8;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 
