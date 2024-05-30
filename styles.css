@@ -1,0 +1,126 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: auto;
+    margin: 0px;
+    font-family: "roboto", sans-serif;
+}
+
+
+.header {
+    background-color: #1f2937;
+    display: flex;
+    flex-basis: auto;
+    padding: 8px;
+    justify-content: center;
+}
+
+.guide {
+    display: flex;
+    color: #f9faf8;
+    font-size: 24px;
+    flex-basis: 900px;
+    padding: 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e5e7eb;
+    padding: 16px;
+    flex: auto;
+    justify-content: center;
+    color: black;
+}
+
+.heroes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 900px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    display: flex;
+}
+
+
+.newGame {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.newPara {
+    display: flex;
+    text-align: center;
+    flex-basis: 400px;
+}
+
+#play {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 32px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    flex: auto;
+}
+
+.innerButtons {
+    display: flex;
+    flex-basis: 900px;
+    padding: 16px;
+    justify-content: space-around;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: auto;
+}
+
+.area {
+    display: flex;
+}
+
+.banner {
+    display: flex;
+}
+
+
+.footer {
+    background-color: #1f2937;
+    display: flex;
+    flex-basis: auto;
+    padding: 8px;
+    justify-content: center;
+}
+
+.footContent {
+    display: flex;
+    color: #f9faf8;
+    font-size: 16px;
+    flex-basis: 1;
+    padding: 1px;
+    justify-content: center;
+    align-items: center;
+}
